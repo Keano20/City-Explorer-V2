@@ -14,10 +14,10 @@ obj/
 *.userprefs
 
 # Configuration files
-appsettings.Development.json  # Only keep this locally, ignore for security
-appsettings.Production.json   # Keep this out of source control (same as above)
-appsettings.json              # Can be committed if it doesn't contain sensitive data
-secrets.json                  # If you're storing secrets here, ignore it
+appsettings.Development.json 
+appsettings.Production.json   
+appsettings.json
+secrets.json              
 
 # Build and publish output
 publish/

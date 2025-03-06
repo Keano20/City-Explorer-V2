@@ -1,0 +1,39 @@
+# ASP.NET Core
+bin/
+obj/
+
+# User-specific files
+.idea/
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Configuration files
+appsettings.Development.json  # Only keep this locally, ignore for security
+appsettings.Production.json   # Keep this out of source control (same as above)
+appsettings.json              # Can be committed if it doesn't contain sensitive data
+secrets.json                  # If you're storing secrets here, ignore it
+
+# Build and publish output
+publish/
+
+# npm packages
+node_modules/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# MongoDB Database Data (if local files are used)
+data/
+
+# Docker
+docker-compose.override.yml
+Dockerfile

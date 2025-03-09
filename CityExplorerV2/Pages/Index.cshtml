@@ -1,0 +1,50 @@
+@page
+@model CityExplorerV2.Pages.IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/header.css">
+    <link rel="stylesheet" href="~/css/filter.css">
+    <script src="~/scripts/app.js" defer type="module"></script>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+</head>
+<body>
+<nav>
+    <div class="navbar">
+        <a class="logo" href="index.html">City Explorer</a>
+        <div class="search-container">
+            <form id="search-form">
+                <label for="search-input">Search</label>
+                <input type="text" placeholder="Enter City Name Here.." id="search-input">
+                <button id="search-button">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main id="main-content">
+    <div class="filter-container" id="filter-container" style="display: none;">
+        <form role="search" aria-label="Filter cities">
+            <label for="filter-input">Filter results:</label>
+            <input type="text" id="filter-input" placeholder="Filter by city country" aria-describedby="filter-description">
+            <small id="filter-description">Enter the cities country to filter the results.</small>
+        </form>
+    </div>
+
+    <div class="cards">
+        <article>
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 City Explorer. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

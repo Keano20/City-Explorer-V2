@@ -17,7 +17,8 @@ obj/
 appsettings.Development.json 
 appsettings.Production.json   
 appsettings.json
-secrets.json              
+secrets.json
+Properties/              
 
 # Build and publish output
 publish/

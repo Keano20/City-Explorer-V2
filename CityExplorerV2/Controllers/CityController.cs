@@ -13,7 +13,7 @@ namespace CityExplorerV2.Controllers
         {
             _mongoDbService = mongoDbService;
         }
-        /* For testing the database connection
+        /*For testing the database connection
 
         [HttpGet("test-connection")]
         public IActionResult TestConnection()
@@ -27,7 +27,6 @@ namespace CityExplorerV2.Controllers
             {
                 return StatusCode(500, $"❌ Failed to connect to MongoDB: {ex.Message}");
             }
-        }
-        */
+        } */
     }
 }

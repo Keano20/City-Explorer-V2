@@ -4,6 +4,7 @@ obj/
 
 # User-specific files
 .idea/
+.idea/**/httpRequests/
 *.DotSettings.user
 .vs/
 .vscode/

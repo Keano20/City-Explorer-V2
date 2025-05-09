@@ -1,0 +1,42 @@
+@page
+@model CityExplorerV2.Pages.RegisterModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a class="logo" href="/">City Explorer</a>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="form-section" aria-labelledby="register-heading">
+        <h1 id="register-heading">Register</h1>
+        <form method="post" aria-describedby="form-instructions">
+            <div>
+                <label asp-for="Username">Username:</label>
+                <input asp-for="Username" id="username" name="username" required />
+            </div>
+            <div>
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" type="password" id="password" name="password" required />
+            </div>
+            <button type="submit">Register</button>
+            <p id="form-instructions">@Model.Message</p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 City Explorer. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@page
+@model CityExplorerV2.Pages.LoginModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a class="logo" href="/">City Explorer</a>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="form-section" aria-labelledby="login-heading">
+        <h1 id="login-heading">Login</h1>
+        <form method="post" aria-describedby="login-response">
+            <div>
+                <label asp-for="Username">Username:</label>
+                <input asp-for="Username" required />
+            </div>
+            <div>
+                <label asp-for="Password">Password:</label>
+                <input asp-for="Password" type="password" required />
+            </div>
+            <button type="submit">Login</button>
+            <p id="login-response">@Model.Message</p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 City Explorer. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -4,6 +4,7 @@ obj/
 
 # User-specific files
 .idea/
+*.DotSettings.user
 .vs/
 .vscode/
 

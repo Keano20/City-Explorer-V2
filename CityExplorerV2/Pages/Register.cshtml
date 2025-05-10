@@ -5,8 +5,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/header.css">
+    <link rel="stylesheet" href="~/css/filter.css">
+    <script src="~/scripts/app.js" defer type="module"></script>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 </head>
 <body>
 <header>
@@ -25,17 +29,16 @@
 <main id="main-content">
     <section class="form-section" aria-labelledby="register-heading">
         <h1 id="register-heading">Register</h1>
-        <form method="post" aria-describedby="form-instructions">
+        <form method="post">
             <div>
-                <label asp-for="Username">Username:</label>
-                <input asp-for="Username" id="username" name="username" required />
+                <label asp-for="Username"></label>
+                <input asp-for="Username" />
             </div>
             <div>
-                <label asp-for="Password">Password:</label>
-                <input asp-for="Password" type="password" id="password" name="password" required />
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" />
             </div>
             <button type="submit">Register</button>
-            <p id="form-instructions">@Model.Message</p>
         </form>
     </section>
 </main>

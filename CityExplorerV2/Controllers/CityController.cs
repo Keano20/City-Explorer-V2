@@ -13,20 +13,5 @@ namespace CityExplorerV2.Controllers
         {
             _mongoDbService = mongoDbService;
         }
-        /*For testing the database connection
-
-        [HttpGet("test-connection")]
-        public IActionResult TestConnection()
-        {
-            try
-            {
-                var database = _mongoDbService.GetDatabase();
-                return Ok($"✅ Connected to MongoDB: {database.DatabaseNamespace.DatabaseName}");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"❌ Failed to connect to MongoDB: {ex.Message}");
-            }
-        } */
     }
 }

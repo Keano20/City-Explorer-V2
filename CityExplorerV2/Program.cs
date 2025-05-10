@@ -17,6 +17,12 @@ builder.Services.AddSingleton<MongoDbService>();
 
 var app = builder.Build();
 
+// Force MongoDbService to be instantiated at startup
+using (var scope = app.Services.CreateScope())
+{
+    var mongoCheck = scope.ServiceProvider.GetRequiredService<MongoDbService>();
+}
+
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {

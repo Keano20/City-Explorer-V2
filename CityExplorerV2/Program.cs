@@ -15,6 +15,10 @@ builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
 builder.Services.AddSingleton<MongoDbService>();
 
+// Configure External API's
+builder.Services.AddHttpClient();
+builder.Services.AddSingleton<ExternalApiService>();
+
 var app = builder.Build();
 
 // Force MongoDbService to be instantiated at startup

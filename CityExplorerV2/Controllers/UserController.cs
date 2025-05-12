@@ -35,4 +35,23 @@ public class UserController : ControllerBase {
 
         return Ok("User registered successfully.");
     }
+    
+    //login goes here
+
+    // Gets all users within the database
+    [HttpGet]
+    public async Task<IActionResult> GetAllUsers()
+    {
+        var users = await _users.Find(_ => true).ToListAsync();
+        return Ok(users);
+    }
+
+    // Deletes a user by ID
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteUser(string id)
+    {
+        var result = await _users.DeleteOneAsync(user => user.Id == id);
+        if (result.DeletedCount == 0) return NotFound("User not found.");
+        return NoContent();
+    }
 }

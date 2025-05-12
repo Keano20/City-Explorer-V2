@@ -1,0 +1,8 @@
+### Register a new user
+POST https://localhost:7222/api/user/register
+Content-Type: application/json
+
+{
+  "username": "Test User",
+  "hashedPassword": "test123"
+}

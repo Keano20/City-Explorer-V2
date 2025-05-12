@@ -1,0 +1,2 @@
+GET https://localhost:7222/api/cityapi/city?name=manchester
+Accept: application/json

@@ -1,0 +1,9 @@
+### Create a new city
+POST https://localhost:7222/api/city
+Content-Type: application/json
+
+{
+  "name": "Test City 5",
+  "country": "Testland",
+  "region": "Testing Province"
+}

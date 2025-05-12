@@ -1,0 +1,10 @@
+### Update a city
+PUT https://localhost:7222/api/city/{{id}}
+Content-Type: application/json
+
+{
+  "id": "{{id}}",
+  "name": "Updated City",
+  "country": "Updated Country",
+  "region": "Updated Region"
+}

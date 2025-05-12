@@ -1,0 +1,2 @@
+### Delete a city 
+DELETE https://localhost:7222/api/city/

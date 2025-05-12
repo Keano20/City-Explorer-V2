@@ -8,8 +8,6 @@ obj/
 *.DotSettings.user
 .vs/
 .vscode/
-
-# User-specific files
 *.user
 *.userosscache
 *.suo

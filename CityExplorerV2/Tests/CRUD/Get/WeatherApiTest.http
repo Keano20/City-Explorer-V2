@@ -1,0 +1,3 @@
+### Get current weather for a city
+GET https://localhost:7222/api/cityapi/weather?city=manchester
+Accept: application/json

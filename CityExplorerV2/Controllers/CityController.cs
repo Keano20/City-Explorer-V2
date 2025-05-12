@@ -55,6 +55,7 @@ namespace CityExplorerV2.Controllers
             return NoContent();
         }
 
+        // DELETE:
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCity(string id)
         {

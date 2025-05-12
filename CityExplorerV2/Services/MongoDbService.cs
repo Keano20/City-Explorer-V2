@@ -27,4 +27,12 @@ public class MongoDbService
     }
     
     public IMongoDatabase GetDatabase() => _database;
+    
+    // Collection for storing cached city search results from the external API
+    public IMongoCollection<BsonDocument> CachedCities =>
+        _database.GetCollection<BsonDocument>("CachedCities");
+    
+    // Collection for storing cached weather data for previously searched cities
+    public IMongoCollection<BsonDocument> CachedWeather =>
+        _database.GetCollection<BsonDocument>("CachedWeather");
 }

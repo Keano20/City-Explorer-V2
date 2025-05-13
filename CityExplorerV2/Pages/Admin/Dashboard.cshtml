@@ -1,19 +1,29 @@
 @page
-@model CityExplorerV2.Pages.Dashboard
-
+@model CityExplorerV2.Pages.Admin.DashboardModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Admin Dashboard";
 }
 
-<!DOCTYPE html>
+<main>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav aria-label="Dashboard Navigation">
+            <ul>
+                <li><button onclick="showTab('cities')">Manage Cities</button></li>
+                <li><button onclick="showTab('users')">Manage Users</button></li>
+            </ul>
+        </nav>
+    </header>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
-</div>
-</body>
-</html>
+    <section id="cities-tab" class="tab-content">
+        <h2>Cities</h2>
+        <div id="cities-container" aria-live="polite">Loading cities...</div>
+    </section>
+
+    <section id="users-tab" class="tab-content" style="display:none;">
+        <h2>Users</h2>
+        <div id="users-container" aria-live="polite">Loading users...</div>
+    </section>
+</main>
+
+<script src="~/scripts/dashboard.js" defer></script>

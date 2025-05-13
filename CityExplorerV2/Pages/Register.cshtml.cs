@@ -35,11 +35,15 @@ public class RegisterModel : PageModel
         }
 
         var hashed = BCrypt.Net.BCrypt.HashPassword(Password);
-        var newUser = new AppUser { Username = Username, HashedPassword = hashed };
+        var newUser = new AppUser
+        {
+            Username = Username,
+            HashedPassword = hashed,
+            IsAdmin = false
+        };
         await _users.InsertOneAsync(newUser);
 
-        Message = "User registered successfully!";
-        Console.WriteLine("Register form submitted");
-        return Page();
+        Console.WriteLine("User registered successfully.");
+        return RedirectToPage("Login");
     }
 }

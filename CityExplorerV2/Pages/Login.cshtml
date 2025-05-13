@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="~/css/header.css">
     <link rel="stylesheet" href="~/css/filter.css">
     <script src="~/scripts/app.js" defer type="module"></script>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
     <nav>
         <div class="navbar">
@@ -32,11 +32,11 @@
         <form method="post" aria-describedby="login-response">
             <div>
                 <label asp-for="Username">Username:</label>
-                <input asp-for="Username" required />
+                <input asp-for="Username" required/>
             </div>
             <div>
                 <label asp-for="Password">Password:</label>
-                <input asp-for="Password" type="password" required />
+                <input asp-for="Password" type="password" required/>
             </div>
             <button type="submit">Login</button>
             <p id="login-response">@Model.Message</p>

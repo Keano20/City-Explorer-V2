@@ -34,7 +34,11 @@ public class LoginModel : PageModel
             return Page();
         }
         
-        Message = "Login successful.";
-        return Page();
+        // set session values
+        HttpContext.Session.SetString("username", user.Username);
+        HttpContext.Session.SetString("IsAdmin", user.IsAdmin.ToString().ToLower());
+        
+        // Redirect to the admin dashboard
+        return RedirectToPage("/Admin?Dashboard");
     }
 }

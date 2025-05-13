@@ -35,10 +35,13 @@ public class LoginModel : PageModel
         }
         
         // set session values
-        HttpContext.Session.SetString("username", user.Username);
+        HttpContext.Session.SetString("Username", user.Username);
         HttpContext.Session.SetString("IsAdmin", user.IsAdmin.ToString().ToLower());
-        
-        // Redirect to the admin dashboard
-        return RedirectToPage("/Admin?Dashboard");
+
+        if (user.IsAdmin)
+        {
+            return RedirectToPage("/Admin/Dashboard");
+        }
+        return RedirectToPage("Index");
     }
 }

@@ -15,4 +15,6 @@ public class AppUser
     
     // Hashed password of the user
     public string HashedPassword { get; set; } = String.Empty;
+    
+    public bool IsAdmin { get; set; } = false;
 }

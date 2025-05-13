@@ -30,13 +30,14 @@
     <section class="form-section" aria-labelledby="login-heading">
         <h1 id="login-heading">Login</h1>
         <form method="post" aria-describedby="login-response">
+            @Html.AntiForgeryToken()
             <div>
                 <label asp-for="Username">Username:</label>
-                <input asp-for="Username" required/>
+                <input asp-for="Username" name="Username" required/>
             </div>
             <div>
                 <label asp-for="Password">Password:</label>
-                <input asp-for="Password" type="password" required/>
+                <input asp-for="Password" type="password" name="Password" required/>
             </div>
             <button type="submit">Login</button>
             <p id="login-response">@Model.Message</p>

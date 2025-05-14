@@ -8,12 +8,14 @@ namespace CityExplorerV2.Controllers;
 public class CityApiController : ControllerBase
 {
     private readonly ExternalApiService _apiService;
-
+    
+    // Connects the controller to the service that communicates with external APIs
     public CityApiController(ExternalApiService apiService)
     {
         _apiService = apiService;
     }
 
+    // Gets city information based on the user's search
     [HttpGet("city")]
     public async Task<IActionResult> GetCityData(string name)
     {
@@ -21,6 +23,7 @@ public class CityApiController : ControllerBase
         return Content(data, "application/json");
     }
 
+    // Gets current weather information for the searched city
     [HttpGet("weather")]
     public async Task<IActionResult> GetWeatherData(string city)
     {

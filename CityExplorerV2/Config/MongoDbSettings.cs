@@ -1,5 +1,6 @@
 namespace CityExplorerV2.Config;
 
+// Holds MongoDB connection configuration from appsettings.json
 public class MongoDbSettings
 {
     public string ConnectionString { get; set; } = string.Empty;

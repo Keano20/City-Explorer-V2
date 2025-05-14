@@ -35,8 +35,6 @@ public class UserController : ControllerBase {
 
         return Ok("User registered successfully.");
     }
-    
-    //login goes here
 
     // Gets all users within the database
     [HttpGet]

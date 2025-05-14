@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/header.css">
     <link rel="stylesheet" href="~/css/filter.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="~/css/auth.css">
     <script src="~/scripts/app.js" defer type="module"></script>
 </head>
 <body>
@@ -27,6 +29,16 @@
 </header>
 
 <main id="main-content">
+    @if (HttpContext.Session.GetString("Username") != null)
+    {
+        <p class="welcome-message">
+            You are already signed in as, @HttpContext.Session.GetString("Username")
+        </p>
+    }
+    @if (HttpContext.Session.GetString("IsAdmin") == "true")
+    {
+        <a href="/Admin/Dashboard" class="admin-button">Admin Dashboard</a>
+    }
     <section class="form-section" aria-labelledby="login-heading">
         <h1 id="login-heading">Login</h1>
         <form method="post" aria-describedby="login-response">
@@ -39,8 +51,10 @@
                 <label asp-for="Password">Password:</label>
                 <input asp-for="Password" type="password" name="Password" required/>
             </div>
+            <div>
+                <p id="login-response">@Model.Message</p>
+            </div>
             <button type="submit">Login</button>
-            <p id="login-response">@Model.Message</p>
         </form>
     </section>
 </main>

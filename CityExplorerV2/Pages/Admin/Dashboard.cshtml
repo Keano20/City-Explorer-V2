@@ -3,11 +3,27 @@
 @{
     ViewData["Title"] = "Admin Dashboard";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/header.css">
+    <link rel="stylesheet" href="~/css/auth.css">
+</head>
 
 <main>
-    <header>
+    <header class="admin-dashboard-header">
         <h1>Admin Dashboard</h1>
+        <a href="/Index" class="return-home-button">Return to City Search</a>
         <nav aria-label="Dashboard Navigation">
+            @if (HttpContext.Session.GetString("Username") != null)
+            {
+                <p class="welcome-message">
+                    Welcome, @HttpContext.Session.GetString("Username")
+                </p>
+            }
             <ul>
                 <li><button onclick="showTab('cities')">Manage Cities</button></li>
                 <li><button onclick="showTab('users')">Manage Users</button></li>

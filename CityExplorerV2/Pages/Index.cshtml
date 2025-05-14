@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/header.css">
     <link rel="stylesheet" href="~/css/filter.css">
+    <link rel="stylesheet" href="~/css/auth.css">
     <script src="~/scripts/app.js" asp-append-version="true" defer type="module"></script>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
     <nav>
         <div class="navbar">
@@ -35,6 +36,17 @@
 </header>
 
 <main id="main-content">
+    @if (HttpContext.Session.GetString("Username") != null)
+    {
+        <p class="welcome-message">
+            Welcome, @HttpContext.Session.GetString("Username")
+            <a href="/Logout" class="logout-button">Logout</a>
+        </p>
+    }
+    @if (HttpContext.Session.GetString("IsAdmin") == "true")
+    {
+        <a href="/Admin/Dashboard" class="admin-button">Admin Dashboard</a>
+    }
     <div class="filter-container" id="filter-container" style="display: none;">
         <form role="search" aria-label="Filter cities">
             <label for="filter-input">Filter results:</label>

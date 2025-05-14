@@ -1,0 +1,137 @@
+.welcome-message {
+    background-color: #1F2833;
+    color: #66FCF1;
+    border: 1px solid #45A29E;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.15);
+}
+
+.admin-button {
+    background-color: #c5c6c7;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    border: solid 2px black;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.admin-button:hover {
+    background-color: #0fa4af;
+    color: #0B0C10;
+}
+
+.logout-button {
+    margin-left: 1rem;
+    background-color: #c5c6c7;
+    color: black;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #0fa4af;
+    color: #0B0C10;
+}
+/* Admin Dashboard */
+
+.admin-dashboard-header {
+    background-color: #1F2833;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+.admin-dashboard-header h1,
+main h1 {
+    color: white;
+}
+
+.return-home-button {
+    background-color: #C5C6C7;
+    color: #0B0C10;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.return-home-button:hover {
+    background-color: #66FCF1;
+    color: #0B0C10;
+}
+
+.welcome-message {
+    background-color: #1F2833;
+    color: white;
+    border: 1px solid #45A29E;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.15);
+    margin-top: 0.5rem;
+}
+
+nav[aria-label="Dashboard Navigation"] {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav[aria-label="Dashboard Navigation"] ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav[aria-label="Dashboard Navigation"] li button {
+    background-color: #C5C6C7;
+    color: #0B0C10;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+nav[aria-label="Dashboard Navigation"] li button:hover {
+    background-color: #66FCF1;
+    color: #0B0C10;
+}
+
+#cities-tab,
+#users-tab {
+    background-color: #0fa4af;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.08);
+    margin-top: 1.5rem;
+}
+
+#cities-container,
+#users-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #45A29E;
+    border-radius: 6px;
+    background-color: #202a36;
+    color: #C5C6C7;
+}

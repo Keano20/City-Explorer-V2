@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/css/header.css">
     <link rel="stylesheet" href="~/css/auth.css">
 </head>
-
+<body>
 <main>
     <header class="admin-dashboard-header">
         <h1>Admin Dashboard</h1>
@@ -33,6 +33,13 @@
 
     <section id="cities-tab" class="tab-content">
         <h2>Cities</h2>
+        <h3>Add New City</h3>
+        <form id="add-city-form" class="city-form">
+            <input type="text" id="city-name" placeholder="City Name" required />
+            <input type="text" id="city-country" placeholder="Country" required />
+            <input type="text" id="city-region" placeholder="Region" required />
+            <button type="submit">Add City</button>
+        </form>
         <div id="cities-container" aria-live="polite">Loading cities...</div>
     </section>
 
@@ -41,5 +48,6 @@
         <div id="users-container" aria-live="polite">Loading users...</div>
     </section>
 </main>
+</body>
 
 <script src="~/scripts/dashboard.js" defer></script>

@@ -33,6 +33,7 @@
     {
         <p class="welcome-message">
             You are already signed in as, @HttpContext.Session.GetString("Username")
+            <a href="/Logout" class="logout-button">Logout</a>
         </p>
     }
     @if (HttpContext.Session.GetString("IsAdmin") == "true")

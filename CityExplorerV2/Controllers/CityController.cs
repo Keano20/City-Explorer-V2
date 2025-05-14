@@ -20,6 +20,7 @@ namespace CityExplorerV2.Controllers
         }
 
         // POST: api/city
+        // Adds a new city to the database
         [HttpPost]
         public async Task<IActionResult> CreateCity([FromBody] City newCity)
         {
@@ -34,6 +35,8 @@ namespace CityExplorerV2.Controllers
             return CreatedAtAction(nameof(GetCityById), new { id = newCity.Id }, newCity);
         }
         
+        // GET: api/city
+        // Returns all cities in the collection
         [HttpGet]
         public async Task<IActionResult> GetAllCities()
         {
@@ -42,6 +45,7 @@ namespace CityExplorerV2.Controllers
         }
 
         // GET: api/city/{id}
+        //Returns a single city by its ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCityById(string id)
         {
@@ -50,7 +54,8 @@ namespace CityExplorerV2.Controllers
             return Ok(city);
         }
         
-        // PUT: 
+        // PUT: api/city/{id}
+        // Updates an existing city by its ID
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCity(string id, [FromBody] City updateCity)
         {
@@ -63,7 +68,8 @@ namespace CityExplorerV2.Controllers
             return NoContent();
         }
 
-        // DELETE:
+        // DELETE: api/city/{id}
+        // Deletes a user by their ID
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCity(string id)
         {

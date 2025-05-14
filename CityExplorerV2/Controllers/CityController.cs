@@ -12,6 +12,7 @@ namespace CityExplorerV2.Controllers
         private readonly MongoDbService _mongoDbService;
         private readonly IMongoCollection<City> _cities;
 
+        // Constructor: Initializes the City collection from MongoDB
         public CityController(MongoDbService mongoDbService)
         {
             _mongoDbService = mongoDbService;
@@ -31,6 +32,13 @@ namespace CityExplorerV2.Controllers
 
             await _cities.InsertOneAsync(newCity);
             return CreatedAtAction(nameof(GetCityById), new { id = newCity.Id }, newCity);
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> GetAllCities()
+        {
+            var cities = await _cities.Find(_ => true).ToListAsync();
+            return Ok(cities);
         }
 
         // GET: api/city/{id}

@@ -36,9 +36,15 @@
         <h2>Cities</h2>
         <h3>Add New City</h3>
         <form id="add-city-form" class="city-form">
-            <input type="text" id="city-name" placeholder="City Name" required />
-            <input type="text" id="city-country" placeholder="Country" required />
-            <input type="text" id="city-region" placeholder="Region" required />
+            <label for="city-name">City Name:</label>
+            <input type="text" id="city-name" name="city-name" placeholder="City Name" required />
+
+            <label for="city-country">Country:</label>
+            <input type="text" id="city-country" name="city-country" placeholder="Country" required />
+
+            <label for="city-region">Region:</label>
+            <input type="text" id="city-region" name="city-region" placeholder="Region" required />
+
             <button type="submit">Add City</button>
         </form>
         <div id="cities-container" aria-live="polite">Loading cities...</div>

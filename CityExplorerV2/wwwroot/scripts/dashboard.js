@@ -21,9 +21,15 @@ async function fetchCities() {
                 <button onclick="deleteCity('${city.id}')">Delete</button>
             </div>
             <div class="edit-mode" style="display: none;">
+                <label for="edit-name-${city.id}">City Name:</label>
                 <input type="text" id="edit-name-${city.id}" value="${city.name}" />
+                
+                <label for="edit-country-${city.id}">Country:</label>
                 <input type="text" id="edit-country-${city.id}" value="${city.country}" />
+                
+                <label for="edit-region-${city.id}">Region:</label>
                 <input type="text" id="edit-region-${city.id}" value="${city.region}" />
+                
                 <button onclick="submitEditCity('${city.id}')">Save</button>
                 <button onclick="cancelEditCity('${city.id}')">Cancel</button>
             </div>

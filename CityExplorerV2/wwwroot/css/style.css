@@ -63,7 +63,7 @@ body {
 /* Footer styling */
 footer {
     background-color: #0fa4af; /* Match navbar background */
-    color: white;
+    color: black;
     padding: 20px;
     text-align: center;
     position: fixed;

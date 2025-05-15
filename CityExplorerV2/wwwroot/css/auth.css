@@ -74,8 +74,8 @@ main h1 {
 }
 
 .welcome-message {
-    background-color: #1F2833;
-    color: white;
+    background-color: white;
+    color: black;
     border: 1px solid #45A29E;
     padding: 0.5rem 1rem;
     border-radius: 8px;

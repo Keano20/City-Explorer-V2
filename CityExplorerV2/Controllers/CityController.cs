@@ -69,7 +69,7 @@ namespace CityExplorerV2.Controllers
         }
 
         // DELETE: api/city/{id}
-        // Deletes a user by their ID
+        // Deletes a city by its ID
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCity(string id)
         {

@@ -6,7 +6,7 @@ namespace CityExplorerV2.Pages
     {
         public void OnGet()
         {
-            // This method runs when the page is accessed via a GET request
+            // runs when the page is accessed via a GET request
         }
     }
 }

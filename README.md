@@ -37,3 +37,31 @@ City Explorer V2 is a redesigned version of the original City Explorer project, 
 1. **Clone the repo**:
    ```bash
    git clone https://github.com/Keano20/City-Explorer-V2.git
+
+2. **Required Configuration**:
+Before running the project, you must create two configuration files.
+name the first one, appsettings.json
+
+Create this file in the project root, and paste:
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "MongoDbSettings": {
+    "ConnectionString": "YOUR_MONGODB_CONNECTION_STRING",
+    "DatabaseName": "CityExplorerDB"
+  },
+  "RapidApi": {
+    "Key": "YOUR_RAPIDAPI_KEY"
+  }
+}
+```
+
+Replace the placeholders with your own MongoDB and RapidAPI credentials.
+Need help getting keys?
+visit MongoDB Atlas: https://www.mongodb.com/products/platform/atlas-database and RapidAPI (GeoDB) https://rapidapi.com/wirefreethought/api/geodb-cities

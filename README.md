@@ -36,4 +36,4 @@ City Explorer V2 is a redesigned version of the original City Explorer project, 
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/your-username/CityExplorerV2.git
+   git clone https://github.com/Keano20/CityExplorerV2.git

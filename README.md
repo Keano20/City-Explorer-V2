@@ -1,6 +1,6 @@
 # 🌎 CityExplorerV2
 
-City Explorer V2 is a full-stack web application built with ASP.NET Core and Razor Pages. It allows users to explore city-specific data and weather insights in real time using external APIs, while supporting secure user authentication and admin-level data management.
+City Explorer V2 is a full-stack web application built with ASP.NET Core. It allows users to explore city-specific data and weather insights in real time using external APIs, while supporting secure user authentication and admin-level data management.
 
 ---
 

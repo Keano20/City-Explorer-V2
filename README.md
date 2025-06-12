@@ -63,5 +63,5 @@ Create this file in the project root, and paste:
 ```
 
 Replace the placeholders with your own MongoDB and RapidAPI credentials.
-Need help getting keys?
+If you need help getting keys
 visit MongoDB Atlas: https://www.mongodb.com/products/platform/atlas-database and RapidAPI (GeoDB) https://rapidapi.com/wirefreethought/api/geodb-cities
